@@ -1,5 +1,5 @@
 const countDown = () => {
-    const launchDate = new Date('16 october, 2024 00:00:00').getTime();
+    const launchDate = new Date('26 october, 2024 00:00:00').getTime();
     const presentDate = new Date().getTime();
     const difference = launchDate - presentDate;
   
