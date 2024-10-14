@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="nav-bar">
+      <ul class="sidebar">
+        <!-- Close Menu Icon -->
+        <img
+          src="./images/icon-close.svg"
+          onclick="closeNav()"
+          alt="Close Menu"
+          class="close"
+          id="close"
+        />
+
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <!-- Hamburger Menu Icon -->
+      <img
+        src="./images/icon-menu.svg"
+        onclick="openNav()"
+        alt="Hamburger Menu"
+        class="hamburger"
+        id="hamburger"
+      />
+
+      <ul class="nav">
+        <span class="title" id="title">sneakers</span>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <img
+          src="./images/icon-cart.svg"
+          class="img img-icon"
+          onclick="showBasket()"
+        />
+        <span id="cart-quantity">0</span>
+        <img src="./images/image-avatar.png" class="img img-avatar" />
+      </ul>
+    </div>
+    <div id="cart-basket"></div>
+
+    <div class="main-container">
+      <div class="col-1">
+        <!-- Previous and Next buttons -->
+        <img src="./images/icon-previous.svg" class="prev" id="prevArrow" />
+        <img src="./images/icon-next.svg" class="next" id="nextArrow" />
+        <!-- Overlay -->
+        <div id="overlay" class="overlay"></div>
+
+        <img
+          src="./images/image-product-1.jpg"
+          class="toggle-img img-1"
+          id="mainImage"
+        />
+
+        <div class="thumbnails">
+          <img
+            src="./images/image-product-1-thumbnail.jpg"
+            class="thumb-img"
+            data-large="./images/image-product-1.jpg"
+          />
+          <img
+            src="./images/image-product-2-thumbnail.jpg"
+            class="thumb-img"
+            data-large="./images/image-product-2.jpg"
+          />
+          <img
+            src="./images/image-product-3-thumbnail.jpg"
+            class="thumb-img"
+            data-large="./images/image-product-3.jpg"
+          />
+          <img
+            src="./images/image-product-4-thumbnail.jpg"
+            class="thumb-img"
+            data-large="./images/image-product-4.jpg"
+          />
+        </div>
+      </div>
+      <div class="col-2">
+        <h3>SNEAKER COMPANY</h3>
+        <h1 class="header">Fall Limited Edition Sneakers</h1>
+        <p class="para">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they'll withstand everthing the
+          weather can offer.
+        </p>
+        <div class="price">
+          <span class="new-price">$125.00</span>
+          <span class="discount">50%</span>
+          <span class="old-price">$250.00</span>
+        </div>
+        <div class="buttons">
+          <div class="items-number">
+            <span
+              ><img src="./images/icon-minus.svg" onclick="changeQuantity(-1)"
+            /></span>
+            <span id="quantity">0</span>
+            <span
+              ><img src="./images/icon-plus.svg" onclick="changeQuantity(1)"
+            /></span>
+          </div>
+          <div class="cart-btn">
+            <button class="btn-cart" onclick="addToCart()">
+              <img src="./images/icon-cart.svg" class="cart-img" />
+              <span>Add to cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Rushikesh Powar</a>.
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
